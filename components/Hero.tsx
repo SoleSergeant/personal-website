@@ -56,7 +56,7 @@ export default function Hero() {
     <section className="min-h-screen flex items-center relative overflow-hidden" style={{ background: "#F9F8F6" }}>
       {/* Subtle background grid */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#2B3490 1px, transparent 1px), linear-gradient(90deg, #2B3490 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
@@ -101,17 +101,32 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="px-6 py-3 rounded-full text-white font-semibold text-sm transition-all hover:shadow-lg hover:-translate-y-0.5"
+                onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
+                className="px-6 py-3 rounded-full text-white font-semibold text-sm transition-all hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
                 style={{ background: "#2B3490" }}
               >
                 Let's Talk
               </a>
               <a
                 href="#experience"
-                className="px-6 py-3 rounded-full font-semibold text-sm border-2 transition-all hover:-translate-y-0.5"
+                onClick={(e) => { e.preventDefault(); document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }); }}
+                className="px-6 py-3 rounded-full font-semibold text-sm border-2 transition-all hover:-translate-y-0.5 cursor-pointer"
                 style={{ borderColor: "#2B3490", color: "#2B3490" }}
               >
                 View My Work
+              </a>
+              <a
+                href="https://www.linkedin.com/in/muhammadjon-ozodjonov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full font-semibold text-sm border-2 transition-all hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer"
+                style={{ borderColor: "#00D4A0", color: "#00D4A0" }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+                Connect on LinkedIn
               </a>
             </div>
 

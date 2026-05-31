@@ -23,39 +23,22 @@ export const EXPERIENCE = [
   {
     org: "Turon MUN",
     role: "Secretary General",
-    period: "Aug 2025 — Present",
+    period: "Oct 2024 — Present",
     location: "Fergana, Uzbekistan",
     color: "navy",
     logo: "/turonmun.png",
+    roles: [
+      { title: "Secretary General", period: "Aug 2025 — Present" },
+      { title: "Deputy Secretary General", period: "Apr 2025 — Aug 2025" },
+      { title: "Head of Logistics", period: "Feb 2025 — Apr 2025" },
+      { title: "Volunteer → Logistics Manager", period: "Oct 2024 — Feb 2025" },
+    ],
     bullets: [
       "Lead and manage a team of 20+ members across 4 departments",
       "Secured partnerships with 1 government org and 3 NGOs",
       "Directed execution of 2 large-scale conferences with 250+ participants",
       "Raised $400+ in funding for youth volunteering initiatives",
-    ],
-  },
-  {
-    org: "Turon MUN",
-    role: "Deputy Secretary General",
-    period: "Apr 2025 — Aug 2025",
-    location: "Fergana, Uzbekistan",
-    color: "navy",
-    logo: "/turonmun.png",
-    bullets: [
-      "Handled sponsorships and department supervision",
-      "Worked alongside Secretary-General on event operations",
-    ],
-  },
-  {
-    org: "Turon MUN",
-    role: "Head of Logistics",
-    period: "Feb 2025 — Apr 2025",
-    location: "Fergana, Uzbekistan",
-    color: "navy",
-    logo: "/turonmun.png",
-    bullets: [
-      "Led a department of 6 as the youngest member",
-      "Oversaw catering, venue prep, delegate accommodation, and printing",
+      "Rose from volunteer to Secretary General in under a year",
     ],
   },
   {
@@ -99,15 +82,6 @@ export const INITIATIVES = [
     description:
       "Fergana's premier Model United Nations conference. As Secretary General, led 20+ team members and executed 2 large-scale conferences with 250+ delegates.",
     stats: ["250+ delegates", "20+ team members", "4 NGO partners", "2 conferences"],
-    link: null,
-  },
-  {
-    name: "Neuronix",
-    logo: null,
-    color: "#6B7280",
-    description:
-      "Online community platform hosting webinars with industry professionals. Moderates live sessions and designs structured engagement for growing audiences.",
-    stats: ["Online webinars", "Industry speakers", "Live moderation"],
     link: null,
   },
 ];

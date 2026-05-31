@@ -10,6 +10,8 @@ const dotColor: Record<string, string> = {
   gray: "#9CA3AF",
 };
 
+type ExpEntry = typeof EXPERIENCE[number];
+
 export default function Experience() {
   const [open, setOpen] = useState<number | null>(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -34,19 +36,14 @@ export default function Experience() {
         </h2>
 
         <div className="relative">
-          {/* Vertical line */}
           <div
             className="absolute left-4 top-3 bottom-3 w-px"
             style={{ background: "linear-gradient(to bottom, #2B3490, #00D4A0)" }}
           />
 
           <div className="space-y-3 ml-12">
-            {EXPERIENCE.map((exp, i) => (
-              <div
-                key={i}
-                className="relative"
-              >
-                {/* Dot */}
+            {EXPERIENCE.map((exp: ExpEntry, i: number) => (
+              <div key={i} className="relative">
                 <div
                   className="absolute -left-[2.85rem] top-4 w-3 h-3 rounded-full border-2 border-white shadow-sm"
                   style={{ background: dotColor[exp.color] }}
@@ -94,14 +91,34 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  {/* Expanded bullets */}
+                  {/* Expanded content */}
                   <div
                     className="overflow-hidden transition-all duration-300"
-                    style={{ maxHeight: open === i ? "400px" : "0px" }}
+                    style={{ maxHeight: open === i ? "600px" : "0px" }}
                   >
                     <div className="px-5 pb-5 pt-0 border-t" style={{ borderColor: "#F3F4F6" }}>
+                      {/* Role progression timeline (for multi-role entries) */}
+                      {"roles" in exp && exp.roles && (
+                        <div className="mt-4 mb-4 flex flex-wrap gap-2">
+                          {(exp.roles as { title: string; period: string }[]).map((r, ri) => (
+                            <div
+                              key={ri}
+                              className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border"
+                              style={{
+                                borderColor: dotColor[exp.color] + "40",
+                                background: dotColor[exp.color] + "10",
+                                color: dotColor[exp.color],
+                              }}
+                            >
+                              <span className="font-semibold">{r.title}</span>
+                              <span className="opacity-60">· {r.period}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
                       <ul className="mt-3 space-y-2">
-                        {exp.bullets.map((b, j) => (
+                        {exp.bullets.map((b: string, j: number) => (
                           <li key={j} className="flex gap-2 text-sm text-gray-600">
                             <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: dotColor[exp.color] }} />
                             {b}
