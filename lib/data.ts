@@ -73,16 +73,21 @@ export const INITIATIVES = [
     description:
       "A youth-led tech initiative running hackathons and coding competitions across Uzbekistan. Built from the ground up — from idea to 200+ participants and $9,000 in funding.",
     stats: ["200+ participants", "$9,000+ raised", "2 hackathons", "5 NGO partners"],
-    link: null,
+    links: [
+      { label: "Telegram", href: "https://t.me/codecaravan", icon: "telegram" },
+    ],
   },
   {
     name: "TuronMUN",
     logo: "/turonmun.png",
     color: "#2B3490",
     description:
-      "Fergana's premier Model United Nations conference. As Secretary General, led 20+ team members and executed 2 large-scale conferences with 250+ delegates.",
+      "Fergana's premier Model United Nations conference. As Secretary General, led 20+ team members and executed 7 large-scale conferences with 750+ participants.",
     stats: ["750+ participants", "20+ team members", "4 NGO partners", "7 conferences"],
-    link: null,
+    links: [
+      { label: "Website", href: "https://turonmun.com", icon: "web" },
+      { label: "Telegram", href: "https://t.me/turonmun", icon: "telegram" },
+    ],
   },
 ];
 
