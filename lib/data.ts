@@ -7,20 +7,6 @@ export const STATS = [
 
 export const EXPERIENCE = [
   {
-    org: "Code Caravan",
-    role: "Founder & CEO",
-    period: "Jan 2025 — Present",
-    location: "Fergana, Uzbekistan",
-    color: "mint",
-    logo: "/codecaravan.png",
-    bullets: [
-      "Managed end-to-end planning of 2 hackathons with 200+ participants",
-      "Coordinated cross-functional teams across 4 departments",
-      "Secured partnerships with 2 government organizations and 5 NGOs",
-      "Raised over $9,000 in funding to support execution and growth",
-    ],
-  },
-  {
     org: "Turon MUN",
     role: "Secretary General",
     period: "Oct 2024 — Present",
@@ -39,6 +25,20 @@ export const EXPERIENCE = [
       "Directed execution of 2 large-scale conferences with 250+ participants",
       "Raised $400+ in funding for youth volunteering initiatives",
       "Rose from volunteer to Secretary General in under a year",
+    ],
+  },
+  {
+    org: "Code Caravan",
+    role: "Founder & CEO",
+    period: "Jan 2025 — Present",
+    location: "Fergana, Uzbekistan",
+    color: "mint",
+    logo: "/codecaravan.png",
+    bullets: [
+      "Managed end-to-end planning of 2 hackathons with 200+ participants",
+      "Coordinated cross-functional teams across 4 departments",
+      "Secured partnerships with 2 government organizations and 5 NGOs",
+      "Raised over $9,000 in funding to support execution and growth",
     ],
   },
   {
