@@ -160,7 +160,8 @@ export default function Hero() {
                   src="/muhammadjon.jpg"
                   alt="Muhammadjon Ozodjonov speaking at an event"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover"
+                  style={{ objectPosition: "35% center" }}
                   priority
                 />
                 {/* Subtle gradient overlay at bottom */}
