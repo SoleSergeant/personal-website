@@ -161,7 +161,7 @@ export default function Hero() {
                   alt="Muhammadjon Ozodjonov speaking at an event"
                   fill
                   className="object-cover"
-                  style={{ objectPosition: "35% center" }}
+                  style={{ objectPosition: "20% center" }}
                   priority
                 />
                 {/* Subtle gradient overlay at bottom */}
