@@ -81,7 +81,7 @@ export const INITIATIVES = [
     color: "#2B3490",
     description:
       "Fergana's premier Model United Nations conference. As Secretary General, led 20+ team members and executed 2 large-scale conferences with 250+ delegates.",
-    stats: ["250+ delegates", "20+ team members", "4 NGO partners", "2 conferences"],
+    stats: ["750+ participants", "20+ team members", "4 NGO partners", "7 conferences"],
     link: null,
   },
 ];
